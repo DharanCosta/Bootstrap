@@ -5,24 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;0,700;0,800;1,400&family=Oswald:wght@400;600;700&family=Roboto&display=swap');
+
+        *{
+            scroll-behavior: smooth;
+            font-family: Roboto, sans-serif;
+        }
+        h1,h2,h3,h4,h5{
+            font-family: Oswald, sans-serif;
+            
+        }
         .tm-social{
             width: 3vw;
             height: 3vw;
             padding: 2px 2px;
             /* filter: invert(100%);
             -webkit-filter: invert(100%); */
-            filter: invert(37%) sepia(12%) saturate(3150%) hue-rotate(176deg) brightness(96%) contrast(90%);
-        
+            filter: invert(37%) sepia(12%) saturate(3150%) hue-rotate(176deg) brightness(96%) contrast(90%); 
+        }
+        .tm-social:hover{
+            filter: invert(68%) sepia(15%) saturate(7084%) hue-rotate(190deg) brightness(94%) contrast(93%);
         }
         .color1{
             color:#3365af;
         }
         .bgcolor1{
-            background-color: #3365af;
-            
+            background-color: #3365af; 
         }
         .color2{
             color:#f4f4f4;
+        }
+        .color3{
+            color:#102749;
         }
         .video{
             width:100%;
@@ -37,6 +51,34 @@
             border-radius: 10px;
             
         }
+        .enviar {
+            width: 75%;
+            margin: 1rem auto;
+            display: block;
+            padding: 1rem 0;
+            border-radius: 16px;
+            border: 3px solid #3365af;
+            background-color: transparent;
+            color: #3365af;
+            font-size: 1.275rem;
+            transition: background-color .3s ease-out;
+        }
+        .enviar:hover {
+            background-color: #3365af;
+            color: #f4f4f4;
+        }
+        .mapabox{
+            width:100%;
+            height: 80%;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 5px 10px;
+            border-radius: 10px;
+            border: 1px solid #3365af;
+            margin-bottom: 0.3rem;
+        }
+
     </style>
 
     <title>Pokémon GO Adventures</title>
@@ -47,17 +89,17 @@
 <body>
     <!--Menu-->
     <nav class="navbar navbar-expand-lg navbar-dark bgcolor1 sticky-top">
-        <a class="navbar-brand" href="#"><img src="assets/img/GO-logo.png" width="58" height="40" alt="" >  Adventures</a>
+        <a class="navbar-brand d-flex" href="#"><img src="assets/img/GO-logo.png" width="58" height="40" alt="" ><h3 class="px-3 color3">ADVENTURES</h3></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav d-flex justify-content-end">
-            <a class="nav-link disable" href="#">Sobre nós <span class="sr-only">(current)</span></a>
-            <a class="nav-link active" href="#safari">Aventuras</a>
-            <a class="nav-link active" href="#eventos">Eventos</a>
+          <div class="navbar-nav d-flex justify-content-end ml-auto">
+            <a class="nav-link disable" href="#">Sobre</a>
+            <a class="nav-link" href="#safari">Aventuras</a>
+            <a class="nav-link" href="#eventos">Eventos</a>
             <a class="nav-link disable" href="#">Torneios</a>
-            <a class="nav-link disabled"href="#">Dicas</a>
+            <a class="nav-link" href="#entrecontato">Contato</a>
           </div>
         </div>
       </nav>
@@ -94,8 +136,8 @@
 
     <!--Jumbotron-->
     <div class="jumbotron jumbotron-fluid" style="background-color: #3365af">
-        <div class="container bgcolor1" id="eventos">
-          <h1 class="display-4 color2">Aventuras no mundo do Pokémon GO</h1>
+        <div class="container bgcolor1" >
+          <h1 class="display-4 color2"><b>Aventuras no mundo do Pokémon GO</b></h1>
           <p class="lead color2">Aqui você encontra as melhores informações e dicas para ser um mestre no Pokémon GO.</p>
         </div>
       </div>
@@ -103,11 +145,12 @@
     
     <!--Cards-->
     <div class="container">
+        <h2 id="eventos" class="d-flex justify-content-center pb-3 color3">Eventos</h2>
         <div class="card-deck">
             <div class="card" >
             <img src="assets/img/festcores.png" class="card-img-top" alt="Evento festival das cores">
             <div class="card-body">
-                <h5 class="card-title"> das cores</h5>
+                <h5 class="card-title color1"> Festival das cores</h5>
                 <p class="card-text">O evento Festival das Cores contará com o lançamento de mais um Pokémon de Alola: Oricorio! Suas formas estarão disponíveis em diferentes partes do mundo como Pokémon regionais e você só poderá encontrar a forma de sua região tanto na Natureza, quanto em Pesquisas de Campo. </p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
             </div>
@@ -115,7 +158,7 @@
             <div class="card">
             <img src="assets/img/holofote.png" class="card-img-top" alt="Evento Hora do Holofote">
             <div class="card-body">
-                <h5 class="card-title">Hora de Holofote Sudowoodo</h5>
+                <h5 class="card-title color1">Hora de Holofote Sudowoodo</h5>
                 <p class="card-text">Todas terças-feiras do mês, das 18h às 19h no horário local, um Pokémon aparecerá em maior quantidade. Além do Pokémon, também há um bônus específico.</p>
                 <p class="card-text"><small class="text-muted">Last updated 2 weeks</small></p>
             </div>
@@ -123,7 +166,7 @@
         <div class="card">
           <img src="assets/img/selva.png" class="card-img-top" alt="Evento Selva Exuberante">
           <div class="card-body">
-            <h5 class="card-title"> Selva Exuberante</h5>
+            <h5 class="card-title color1"> Selva Exuberante</h5>
             <p class="card-text">O evento Selva Exuberante será focado em Pokémon do tipo Planta e contará com o lançamento de Fomantis e sua evolução, Lurantis. Pela primeira vez no Pokémon GO será possível encontrar Cottonee Brilhante e Tapu Lele será o novo Chefe de Reides 5 Estrelas.</p>
             <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
@@ -132,12 +175,10 @@
     <!--/Cards-->
 
     <!--Texto e Vídeo-->
-    
-    
-        
-        <div class="row mt-5 p-md-5">
+    <h2 id="safari" class="d-flex justify-content-center pt-5 pb-0 mb-0 color3">Aventuras</h2>
+        <div class="row p-md-2">
             <div class="col-md-6">
-                <h3 id="safari" >Safari Zone - Porto Alegre</h3>
+                <h3 class=" pb-3 color1" >Safari Zone - Porto Alegre</h3>
                 <p>Passaram pelo Pokémon Go Safari Zone 22,5 mil participantes credenciados. As vagas foram sorteadas gratuitamente entre 125 mil candidatos. Como pelo menos um terço deles vieram a Porto Alegre acompanhada, a prefeitura calcula mais de 30 mil "caçadores" à margem do Guaíba. A maioria de jovens adultos entusiastas do jogo, que virou febre em 2016.</p>
                 <p>Dentro do aplicativo, o grande barato era a oportunidade de caçar pokémons raros, capturados pelo celular em realidade aumentada (o monstrinho aparece quando a câmera do celular aponta para ele). No evento de Porto Alegre, a principal atração era o Relicanth, pokémon em forma de peixe que, fora de eventos, só pode ser capturado na Ocean</p>
                 <p>Outros pokémons deram as caras em Porto Alegre em versões alternativas raras, com cores diferentes das tradicionais. Esses e outros eram caçados por jogadores de sombreiros e até guarda-chuvas para se resguardar do sol, sob o risco de mudarem a cor da pele sob o calor de 35°C assim como os monstrinhos virtuais. </p>
@@ -150,6 +191,37 @@
         </div>
         <!--/Texto e vídeo-->
         
+        <hr>
+
+        <!--Contato-->
+        <section class="row pt-5 d-flex align-content-center" id="entrecontato">
+            <div class="col-md-6" >
+                <h3 class="pl-3 pb-3 color1" >Compartilhe sua aventura</h3>
+                    <form class="form-group w-100 pt-3 pr-3 pl-3">
+                        
+                        <label for="nome">Nome:</label>
+                        <input class="input form-control" type="text" id="nome" onkeyup="validaNome()">
+                        <div id='txtNome'></div>
+                        
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" onkeyup="validaEmail()">
+                        <div id='txtEmail'></div>
+                        
+                        <label for="Assunto">Descreva sua aventura:</label>
+                        <textarea name="assunto" id="assunto" cols="60" rows="5" class="form-control" onkeyup="validaAssunto()" ></textarea>
+                        <div id='txtAssunto'></div>
+                        <div id="contador"></div>
+                        <button class="enviar" onclick="enviar()">Enviar</button>
+
+                    </form>
+            </div>
+            <div class="col-md-6 ">
+                    <iframe class="mapabox pt-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.3187939560435!2d-46.641676839714776!3d-23.571249874621444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7dd3fbd5b75f653a!2zMjPCsDM0JzEyLjMiUyA0NsKwMzgnMjUuMCJX!5e0!3m2!1spt-BR!2sbr!4v1647553427774!5m2!1spt-BR!2sbr"  style="border:0;"  loading="lazy" id="mapa" ></iframe>
+                    <p class="m-0 p-0">Rua Vergueiro, 1000 </p>
+                    <p class="m-0 p-0">Paraíso, São Paulo - SP, 01504-000</p>    
+            </div>
+        </section>
+        <!--/Contato-->
 
 
         <!--Rodapé-->
@@ -182,7 +254,8 @@
 
 
     <!-- Scripts Bootstrap-->
+    <script src="./assets/script/javascript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 </body>
-</html>
+</html> 
